@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>School Sections</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #DCFCE7;
+            color: #172018;
+        }
+
+        /* NAVIGATION */
+
+        nav {
+            background: #14532D;
+            padding: 18px 40px;
+
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+
+        nav h2 {
+            color: white;
+            margin: 0;
+            margin-right: auto;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #FACC15;
+        }
+
+        /* MAIN */
+
+        main {
+            max-width: 1100px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+
+        .page-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .page-title h1 {
+            color: #14532D;
+            font-size: 45px;
+            margin-bottom: 10px;
+        }
+
+        .page-title p {
+            font-size: 18px;
+        }
+
+        /* GRADE LEVELS */
+
+        .grade-level {
+            background: white;
+            margin-bottom: 25px;
+            padding: 25px;
+            border-radius: 15px;
+
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+
+            border-left: 7px solid #14532D;
+        }
+
+        .grade-level h2 {
+            color: #14532D;
+            margin-top: 0;
+        }
+
+        /* SECTION BUTTONS */
+
+        .sections {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+
+        .section-button {
+            background: #FACC15;
+            color: #172018;
+
+            border: none;
+            border-radius: 10px;
+
+            padding: 18px;
+
+            font-size: 17px;
+            font-weight: bold;
+
+            cursor: pointer;
+
+            transition: 0.2s;
+        }
+
+        .section-button:hover {
+            background: #14532D;
+            color: white;
+
+            transform: translateY(-3px);
+        }
+
+        /* SECTION INFORMATION */
+
+        .section-info {
+            display: none;
+
+            margin-top: 15px;
+            padding: 15px;
+
+            background: #DCFCE7;
+            border-radius: 10px;
+        }
+
+        .section-info.show {
+            display: block;
+        }
+
+        .section-info h3 {
+            color: #14532D;
+            margin-top: 0;
+        }
+
+        /* FOOTER */
+
+        footer {
+            margin-top: 60px;
+            padding: 25px;
+
+            background: #14532D;
+            color: white;
+
+            text-align: center;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 700px) {
+
+            nav {
+                padding: 18px;
+                flex-wrap: wrap;
+            }
+
+            nav h2 {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+
+            nav a {
+                font-size: 14px;
+            }
+
+            .page-title h1 {
+                font-size: 35px;
+            }
+
+            .sections {
+                grid-template-columns: 1fr;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+    <!-- NAVIGATION -->
+
+    <nav>
+
+        <h2>My School</h2>
+
+        <a href="index.html">Home</a>
+
+        <a href="history.html">History</a>
+
+        <a href="sections.html">Sections</a>
+
+        <a href="subjects.html">Subjects</a>
+
+        <a href="students.html">Students</a>
+
+    </nav>
+
+
+    <!-- MAIN CONTENT -->
+
+    <main>
+
+        <div class="page-title">
+
+            <h1>Grade Levels & Sections</h1>
+
+            <p>
+                Select a grade level to view its sections.
+            </p>
+
+        </div>
+
+
+        <!-- GRADE 7 -->
+
+        <div class="grade-level">
+
+            <h2>Grade 7</h2>
+
+            <div class="sections">
+
+                <button
+                    class="section-button"
+                    onclick="showSection('grade7Section1')"
+                >
+                    Section 7-A
+                </button>
+
+                <button
+                    class="section-button"
+                    onclick="showSection('grade7Section2')"
+                >
+                    Section 7-B
+                </button>
+
+            </div>
+
+            <div id="grade7Section1" class="section-info">
+
+                <h3>Grade 7 - Section A</h3>
+
+                <p>
+                    Placeholder for Section 7-A information.
+                </p>
+
+            </div>
+
+            <div id="grade7Section2" class="section-info">
+
+                <h3>Grade 7 - Section B</h3>
+
+                <p>
+                    Placeholder for Section 7-B information.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- GRADE 8 -->
+
+        <div class="grade-level">
+
+            <h2>Grade 8</h2>
+
+            <div class="sections">
+
+                <button
+                    class="section-button"
+                    onclick="showSection('grade8Section1')"
+                >
+                    Section 8-A
+                </button>
+
+                <button
+                    class="section-button"
+                    onclick="showSection('grade8Section2')"
+                >
+                    Section 8-B
+                </button>
+
+            </div>
+
+            <div id="grade8Section1" class="section-info">
+
+                <h3>Grade 8 - Section A</h3>
+
+                <p>
+                    Placeholder for Section 8-A information.
+                </p>
+
+            </div>
+
+            <div id="grade8Section2" class="section-info">
+
+                <h3>Grade 8 - Section B</h3>
+
+                <p>
+                    Placeholder for Section 8-B information.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- GRADE 9 -->
+
+        <div class="grade-level">
+
+            <h2>Grade 9</h2>
+
+            <div class="sections">
+
+                <button
+                    class="section-button"
+                    onclick="showSection('grade9Section1')"
+                >
+                    Section 9-A
+                </button>
+
+                <button
+                    class="section-button"
+                    onclick="showSection('grade9Section2')"
+                >
+                    Section 9-B
+                </button>
+
+            </div>
+
+            <div id="grade9Section1" class="section-info">
+
+                <h3>Grade 9 - Section A</h3>
+
+                <p>
+                    Placeholder for Section 9-A information.
+                </p>
+
+            </div>
+
+            <div id="grade9Section2" class="section-info">
+
+                <h3>Grade 9 - Section B</h3>
+
+                <p>
+                    Placeholder for Section 9-B information.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- GRADE 10 -->
+
+        <div class="grade-level">
+
+            <h2>Grade 10</h2>
+
+            <div class="sections">
+
+                <button
+                    class="section-button"
+                    onclick="showSection('grade10Section1')"
+                >
+                    Section 10-A
+                </button>
+
+                <button
+                    class="section-button"
+                    onclick="showSection('grade10Section2')"
+                >
+                    Section 10-B
+                </button>
+
+            </div>
+
+            <div id="grade10Section1" class="section-info">
+
+                <h3>Grade 10 - Section A</h3>
+
+                <p>
+                    Placeholder for Section 10-A information.
+                </p>
+
+            </div>
+
+            <div id="grade10Section2" class="section-info">
+
+                <h3>Grade 10 - Section B</h3>
+
+                <p>
+                    Placeholder for Section 10-B information.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- GRADE 11 -->
+
+        <div class="grade-level">
+
+            <h2>Grade 11</h2>
+
+            <div class="sections">
+
+                <button
+                    class="section-button"
+                    onclick="showSection('grade11Section1')"
+                >
+                    Section 11-A
+                </button>
+
+                <button
+                    class="section-button"
+                    onclick="showSection('grade11Section2')"
+                >
+                    Section 11-B
+                </button>
+
+            </div>
+
+            <div id="grade11Section1" class="section-info">
+
+                <h3>Grade 11 - Section A</h3>
+
+                <p>
+                    Placeholder for Section 11-A information.
+                </p>
+
+            </div>
+
+            <div id="grade11Section2" class="section-info">
+
+                <h3>Grade 11 - Section B</h3>
+
+                <p>
+                    Placeholder for Section 11-B information.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- GRADE 12 -->
+
+        <div class="grade-level">
+
+            <h2>Grade 12</h2>
+
+            <div class="sections">
+
+                <button
+                    class="section-button"
+                    onclick="showSection('grade12Section1')"
+                >
+                    Section 12-A
+                </button>
+
+                <button
+                    class="section-button"
+                    onclick="showSection('grade12Section2')"
+                >
+                    Section 12-B
+                </button>
+
+            </div>
+
+            <div id="grade12Section1" class="section-info">
+
+                <h3>Grade 12 - Section A</h3>
+
+                <p>
+                    Placeholder for Section 12-A information.
+                </p>
+
+            </div>
+
+            <div id="grade12Section2" class="section-info">
+
+                <h3>Grade 12 - Section B</h3>
+
+                <p>
+                    Placeholder for Section 12-B information.
+                </p>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>© 2026 My School</p>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script>
+
+        function showSection(sectionId) {
+
+            /*
+             * Get all section information boxes
+             */
+            const sections =
+                document.querySelectorAll(".section-info");
+
+
+            /*
+             * Hide all sections first
+             */
+            sections.forEach(function(section) {
+
+                section.classList.remove("show");
+
+            });
+
+
+            /*
+             * Find the section that was clicked
+             */
+            const selectedSection =
+                document.getElementById(sectionId);
+
+
+            /*
+             * Show the selected section
+             */
+            selectedSection.classList.add("show");
+
+        }
+
+    </script>
+
+</body>
+</html>

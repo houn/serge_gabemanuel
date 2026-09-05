@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>School Subjects</title>
+
+    <style>
+        /* =========================
+           GENERAL
+        ========================= */
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #DCFCE7;
+            color: #172018;
+        }
+
+
+        /* =========================
+           NAVIGATION BAR
+        ========================= */
+
+        nav {
+            background: #14532D;
+            padding: 18px 40px;
+
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+
+        nav h2 {
+            color: white;
+            margin: 0;
+            margin-right: auto;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #FACC15;
+        }
+
+
+        /* =========================
+           MAIN CONTENT
+        ========================= */
+
+        main {
+            max-width: 1100px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+
+        .page-title {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .page-title h1 {
+            color: #14532D;
+            font-size: 45px;
+            margin-bottom: 10px;
+        }
+
+        .page-title p {
+            color: #3f5144;
+            font-size: 18px;
+        }
+
+
+        /* =========================
+           SEARCH BAR
+        ========================= */
+
+        .search-box {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .search-box input {
+            width: 80%;
+            max-width: 600px;
+
+            padding: 15px 20px;
+
+            border: 2px solid #14532D;
+            border-radius: 10px;
+
+            font-size: 16px;
+            outline: none;
+        }
+
+        .search-box input:focus {
+            border-color: #FACC15;
+        }
+
+
+        /* =========================
+           SUBJECT CARDS
+        ========================= */
+
+        #subjectsContainer {
+            display: grid;
+
+            grid-template-columns:
+                repeat(auto-fit, minmax(280px, 1fr));
+
+            gap: 25px;
+        }
+
+        .subject-card {
+            background: white;
+
+            border-radius: 15px;
+
+            padding: 25px;
+
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+
+            border-top: 6px solid #14532D;
+
+            transition: 0.3s;
+        }
+
+        .subject-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .subject-card h2 {
+            color: #14532D;
+            margin-top: 0;
+        }
+
+        .subject-card p {
+            color: #555;
+        }
+
+
+        /* =========================
+           SUBJECT BUTTON
+        ========================= */
+
+        .subject-button {
+            width: 100%;
+
+            padding: 13px;
+
+            border: none;
+
+            border-radius: 8px;
+
+            background: #FACC15;
+
+            color: #172018;
+
+            font-weight: bold;
+
+            font-size: 15px;
+
+            cursor: pointer;
+
+            margin-top: 10px;
+        }
+
+        .subject-button:hover {
+            background: #14532D;
+            color: white;
+        }
+
+
+        /* =========================
+           LESSONS
+        ========================= */
+
+        .lessons {
+            display: none;
+
+            margin-top: 20px;
+
+            padding: 15px;
+
+            background: #DCFCE7;
+
+            border-radius: 10px;
+        }
+
+        .lessons.show {
+            display: block;
+        }
+
+        .lessons h3 {
+            color: #14532D;
+            margin-top: 0;
+        }
+
+        .lessons ul {
+            padding-left: 20px;
+        }
+
+        .lessons li {
+            margin-bottom: 8px;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            margin-top: 60px;
+
+            padding: 25px;
+
+            background: #14532D;
+
+            color: white;
+
+            text-align: center;
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 700px) {
+
+            nav {
+                padding: 18px;
+                flex-wrap: wrap;
+            }
+
+            nav h2 {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+
+            nav a {
+                font-size: 14px;
+            }
+
+            .page-title h1 {
+                font-size: 35px;
+            }
+
+            .search-box input {
+                width: 100%;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         NAVIGATION
+    ========================= -->
+
+    <nav>
+
+        <h2>My School</h2>
+
+        <a href="index.html">Home</a>
+
+        <a href="history.html">History</a>
+
+        <a href="sections.html">Sections</a>
+
+        <a href="subjects.html">Subjects</a>
+
+        <a href="students.html">Students</a>
+
+    </nav>
+
+
+    <!-- =========================
+         MAIN CONTENT
+    ========================= -->
+
+    <main>
+
+        <div class="page-title">
+
+            <h1>Subjects</h1>
+
+            <p>
+                Explore the subjects and lessons offered by our school.
+            </p>
+
+        </div>
+
+
+        <!-- SEARCH -->
+
+        <div class="search-box">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search for a subject..."
+            >
+
+        </div>
+
+
+        <!-- SUBJECTS -->
+
+        <div id="subjectsContainer">
+
+
+            <!-- MATHEMATICS -->
+
+            <div class="subject-card">
+
+                <h2>Mathematics</h2>
+
+                <p>
+                    Develop mathematical thinking, problem-solving,
+                    and analytical skills.
+                </p>
+
+                <button
+                    class="subject-button"
+                    onclick="toggleLessons('mathLessons')"
+                >
+                    View Lessons
+                </button>
+
+                <div
+                    class="lessons"
+                    id="mathLessons"
+                >
+
+                    <h3>Lessons</h3>
+
+                    <ul>
+
+                        <li>Algebra</li>
+
+                        <li>Geometry</li>
+
+                        <li>Statistics</li>
+
+                        <li>Probability</li>
+
+                        <li>Functions</li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+
+            <!-- SCIENCE -->
+
+            <div class="subject-card">
+
+                <h2>Science</h2>
+
+                <p>
+                    Learn about the natural world through
+                    observation and experimentation.
+                </p>
+
+                <button
+                    class="subject-button"
+                    onclick="toggleLessons('scienceLessons')"
+                >
+                    View Lessons
+                </button>
+
+                <div
+                    class="lessons"
+                    id="scienceLessons"
+                >
+
+                    <h3>Lessons</h3>
+
+                    <ul>
+
+                        <li>Biology</li>
+
+                        <li>Chemistry</li>
+
+                        <li>Physics</li>
+
+                        <li>Earth Science</li>
+
+                        <li>Environmental Science</li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+
+            <!-- ENGLISH -->
+
+            <div class="subject-card">
+
+                <h2>English</h2>
+
+                <p>
+                    Improve communication, reading,
+                    writing, and literature skills.
+                </p>
+
+                <button
+                    class="subject-button"
+                    onclick="toggleLessons('englishLessons')"
+                >
+                    View Lessons
+                </button>
+
+                <div
+                    class="lessons"
+                    id="englishLessons"
+                >
+
+                    <h3>Lessons</h3>
+
+                    <ul>
+
+                        <li>Grammar</li>
+
+                        <li>Reading</li>
+
+                        <li>Writing</li>
+
+                        <li>Literature</li>
+
+                        <li>Public Speaking</li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+
+            <!-- FILIPINO -->
+
+            <div class="subject-card">
+
+                <h2>Filipino</h2>
+
+                <p>
+                    Pag-aaral ng wika, panitikan,
+                    at komunikasyon.
+                </p>
+
+                <button
+                    class="subject-button"
+                    onclick="toggleLessons('filipinoLessons')"
+                >
+                    View Lessons
+                </button>
+
+                <div
+                    class="lessons"
+                    id="filipinoLessons"
+                >
+
+                    <h3>Mga Aralin</h3>
+
+                    <ul>
+
+                        <li>Panitikan</li>
+
+                        <li>Wika</li>
+
+                        <li>Pagsulat</li>
+
+                        <li>Pagbasa</li>
+
+                        <li>Komunikasyon</li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+
+            <!-- ARALING PANLIPUNAN -->
+
+            <div class="subject-card">
+
+                <h2>Araling Panlipunan</h2>
+
+                <p>
+                    Learn about history, society,
+                    culture, and geography.
+                </p>
+
+                <button
+                    class="subject-button"
+                    onclick="toggleLessons('apLessons')"
+                >
+                    View Lessons
+                </button>
+
+                <div
+                    class="lessons"
+                    id="apLessons"
+                >
+
+                    <h3>Lessons</h3>
+
+                    <ul>
+
+                        <li>Philippine History</li>
+
+                        <li>Geography</li>
+
+                        <li>Government</li>
+
+                        <li>Economics</li>
+
+                        <li>Culture and Society</li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+
+            <!-- MAPEH -->
+
+            <div class="subject-card">
+
+                <h2>MAPEH</h2>
+
+                <p>
+                    Explore music, arts, physical education,
+                    and health.
+                </p>
+
+                <button
+                    class="subject-button"
+                    onclick="toggleLessons('mapehLessons')"
+                >
+                    View Lessons
+                </button>
+
+                <div
+                    class="lessons"
+                    id="mapehLessons"
+                >
+
+                    <h3>Lessons</h3>
+
+                    <ul>
+
+                        <li>Music</li>
+
+                        <li>Arts</li>
+
+                        <li>Physical Education</li>
+
+                        <li>Health</li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
+    <footer>
+
+        <p>© 2026 My School</p>
+
+    </footer>
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================= -->
+
+    <script>
+
+        /*
+        ========================================
+        SHOW / HIDE LESSONS
+        ========================================
+        */
+
+        function toggleLessons(lessonId) {
+
+            const lessons =
+                document.getElementById(lessonId);
+
+            lessons.classList.toggle("show");
+
+        }
+
+
+        /*
+        ========================================
+        SUBJECT SEARCH
+        ========================================
+        */
+
+        const searchInput =
+            document.getElementById("searchInput");
+
+        const subjectCards =
+            document.querySelectorAll(".subject-card");
+
+
+        searchInput.addEventListener("input", function() {
+
+            const searchText =
+                searchInput.value.toLowerCase();
+
+
+            subjectCards.forEach(function(card) {
+
+                const subjectName =
+                    card.querySelector("h2")
+                        .textContent
+                        .toLowerCase();
+
+
+                if (subjectName.includes(searchText)) {
+
+                    card.style.display = "block";
+
+                } else {
+
+                    card.style.display = "none";
+
+                }
+
+            });
+
+        });
+
+    </script>
+
+
+</body>
+</html>
