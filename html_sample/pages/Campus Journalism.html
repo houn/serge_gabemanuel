@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Campus Journalism</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: #172018;
+
+            background-image:
+                linear-gradient(
+                    rgba(20, 83, 45, 0.82),
+                    rgba(220, 252, 231, 0.90)
+                ),
+                url("images/school.jpg");
+
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+        }
+
+        /* NAVIGATION */
+
+        nav {
+            background: #14532D;
+            padding: 18px 40px;
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+
+        nav h2 {
+            color: white;
+            margin: 0;
+            margin-right: auto;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #FACC15;
+        }
+
+        /* MAIN */
+
+        main {
+            max-width: 1100px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #14532D;
+            margin-bottom: 40px;
+        }
+
+        /* CONTENT CARDS */
+
+        .content-card {
+            background: rgba(255, 255, 255, 0.94);
+            padding: 30px;
+            margin-bottom: 25px;
+            border-radius: 12px;
+
+            box-shadow:
+                0 4px 10px rgba(0, 0, 0, 0.08);
+        }
+
+        .content-card h2 {
+            color: #14532D;
+            margin-top: 0;
+        }
+
+        .content-card p {
+            line-height: 1.7;
+        }
+
+        /* HIGHLIGHT */
+
+        .highlight {
+            background: #DCFCE7;
+            border-left: 5px solid #FACC15;
+            padding: 20px;
+            margin-top: 25px;
+            border-radius: 8px;
+            line-height: 1.7;
+        }
+
+        /* ACHIEVEMENT BOX */
+
+        .achievement {
+            background: #DCFCE7;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 10px;
+
+            border-left: 5px solid #14532D;
+        }
+
+        .achievement h3 {
+            color: #14532D;
+            margin-top: 0;
+        }
+
+        /* BACK BUTTON */
+
+        .back-button {
+            display: inline-block;
+            background: #14532D;
+            color: white;
+            text-decoration: none;
+
+            padding: 14px 22px;
+            border-radius: 8px;
+
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .back-button:hover {
+            background: #FACC15;
+            color: #172018;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #14532D;
+            color: white;
+            text-align: center;
+            padding: 25px;
+            margin-top: 60px;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 700px) {
+
+            nav {
+                flex-wrap: wrap;
+                padding: 18px;
+            }
+
+            nav h2 {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+
+            nav a {
+                font-size: 14px;
+            }
+
+            main {
+                margin: 30px auto;
+                padding: 15px;
+            }
+
+            .content-card {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ==================== NAVIGATION ==================== -->
+
+    <nav>
+
+        <h2>My School</h2>
+
+        <a href="index.html">Home</a>
+        <a href="history.html">History</a>
+        <a href="sections.html">Sections</a>
+        <a href="subjects.html">Subjects</a>
+        <a href="students.html">Students</a>
+
+    </nav>
+
+
+    <!-- ==================== MAIN CONTENT ==================== -->
+
+    <main>
+
+        <h1>📝 Campus Journalism</h1>
+
+
+        <!-- INTRODUCTION -->
+
+        <div class="content-card">
+
+            <h2>Campus Journalism at Mandaue City Science National High School</h2>
+
+            <p>
+                Mandaue City Science National High School has a
+                strong history in campus journalism, with students
+                consistently participating and earning recognition
+                in division, regional, and national competitions.
+            </p>
+
+            <p>
+                The school's journalism program covers different
+                areas of campus journalism, including individual
+                and group competitions, broadcasting, online
+                publishing, and collaborative desktop publishing
+                in both English and Filipino.
+            </p>
+
+        </div>
+
+
+        <!-- DSPC 2025-2026 -->
+
+        <div class="content-card">
+
+            <h2>🏆 2025–2026 Division Schools Press Conference</h2>
+
+            <p>
+                At the 2025 Division Schools Press Conference (DSPC),
+                held on January 27, 2026 at Basak Elementary School,
+                Mandaue City Science National High School was named
+                the overall top-performing school at the secondary
+                level.
+            </p>
+
+            <div class="highlight">
+
+                <strong>
+                    The school was recognized as the overall
+                    top-performing secondary school among roughly
+                    600 campus journalists, advisers, and coaches
+                    across the Mandaue division.
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <!-- COMPETITION ACHIEVEMENTS -->
+
+        <div class="content-card">
+
+            <h2>📰 Journalism Competition Achievements</h2>
+
+            <p>
+                The school's journalists achieved strong results
+                across a wide range of categories.
+            </p>
+
+            <div class="achievement">
+
+                <h3>Individual and Group Categories</h3>
+
+                <p>
+                    Students earned recognition in individual and
+                    group journalism competitions.
+                </p>
+
+            </div>
+
+
+            <div class="achievement">
+
+                <h3>Broadcasting</h3>
+
+                <p>
+                    The school competed successfully in broadcasting
+                    categories as part of its campus journalism
+                    program.
+                </p>
+
+            </div>
+
+
+            <div class="achievement">
+
+                <h3>Online Publishing</h3>
+
+                <p>
+                    Students also participated in online publishing
+                    categories, demonstrating their skills in
+                    digital journalism.
+                </p>
+
+            </div>
+
+
+            <div class="achievement">
+
+                <h3>Collaborative Desktop Publishing</h3>
+
+                <p>
+                    The school also earned recognition in
+                    collaborative desktop publishing competitions.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- JASHAIRA -->
+
+        <div class="content-card">
+
+            <h2>✍️ Individual Recognition</h2>
+
+            <div class="achievement">
+
+                <h3>Jashaira Lovei Heyrosa</h3>
+
+                <p>
+                    Jashaira Lovei Heyrosa placed <strong>1st</strong>
+                    in Filipino sports writing during the 2025
+                    Division Schools Press Conference.
+                </p>
+
+                <p>
+                    She credited her coach's guidance and her own
+                    self-belief for the achievement.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- REGIONAL ADVANCEMENT -->
+
+        <div class="content-card">
+
+            <h2>🌎 Advancement to the Regional Level</h2>
+
+            <p>
+                The school's success at the division level qualified
+                its delegation to advance to the
+                <strong>2026 Regional Schools Press Conference
+                (RSPC)</strong>.
+            </p>
+
+            <p>
+                The regional competition was scheduled for
+                March 2, 2026 in Danao City.
+            </p>
+
+        </div>
+
+
+        <!-- NATIONAL PARTICIPATION -->
+
+        <div class="content-card">
+
+            <h2>🇵🇭 National Schools Press Conference</h2>
+
+            <p>
+                The school's journalism program has also reached the
+                national level.
+            </p>
+
+            <p>
+                A Manila Bulletin article published in July 2026
+                featured Grade 12 student and sports writer
+                <strong>Karla Charismae C. Dela Rama</strong>,
+                describing her experience at her first National
+                Schools Press Conference (NSPC).
+            </p>
+
+            <div class="highlight">
+
+                The National Schools Press Conference is the highest
+                level of campus journalism competition in the
+                Philippines.
+
+            </div>
+
+        </div>
+
+
+        <!-- JOURNALISM PIPELINE -->
+
+        <div class="content-card">
+
+            <h2>📚 The Campus Journalism Competition Path</h2>
+
+            <p>
+                Journalism competitions in the Philippines follow
+                a progression from the division level to the
+                national level.
+            </p>
+
+            <div class="achievement">
+
+                <h3>Division</h3>
+
+                <p>
+                    Division Schools Press Conference (DSPC)
+                </p>
+
+            </div>
+
+
+            <div class="achievement">
+
+                <h3>Regional</h3>
+
+                <p>
+                    Regional Schools Press Conference (RSPC)
+                </p>
+
+            </div>
+
+
+            <div class="achievement">
+
+                <h3>National</h3>
+
+                <p>
+                    National Schools Press Conference (NSPC)
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- HISTORICAL STRENGTH -->
+
+        <div class="content-card">
+
+            <h2>⭐ A Strong Journalism Tradition</h2>
+
+            <p>
+                Mandaue City Science High School has been described
+                as one of the division's traditional
+                <strong>"perennial winners"</strong> in secondary-level
+                campus journalism competitions.
+            </p>
+
+            <p>
+                This reflects a sustained track record of achievement
+                rather than a single recent success.
+            </p>
+
+        </div>
+
+
+        <!-- BACK BUTTON -->
+
+        <div class="content-card">
+
+            <a href="history.html" class="back-button">
+                ← Back to Advancements
+            </a>
+
+        </div>
+
+    </main>
+
+
+    <!-- ==================== FOOTER ==================== -->
+
+    <footer>
+
+        <p>
+            © 2026 My School
+        </p>
+
+    </footer>
+
+</body>
+</html>

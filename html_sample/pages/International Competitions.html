@@ -1,0 +1,466 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>International Science & Engineering</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: #172018;
+
+            background-image:
+                linear-gradient(
+                    rgba(20, 83, 45, 0.82),
+                    rgba(220, 252, 231, 0.90)
+                ),
+                url("images/school.jpg");
+
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+        }
+
+        /* NAVIGATION */
+
+        nav {
+            background: #14532D;
+            padding: 18px 40px;
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+
+        nav h2 {
+            color: white;
+            margin: 0;
+            margin-right: auto;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #FACC15;
+        }
+
+        /* MAIN */
+
+        main {
+            max-width: 1100px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #14532D;
+            margin-bottom: 40px;
+        }
+
+        /* CONTENT CARDS */
+
+        .content-card {
+            background: rgba(255, 255, 255, 0.94);
+            padding: 30px;
+            margin-bottom: 25px;
+            border-radius: 12px;
+
+            box-shadow:
+                0 4px 10px rgba(0, 0, 0, 0.08);
+        }
+
+        .content-card h2 {
+            color: #14532D;
+            margin-top: 0;
+        }
+
+        .content-card h3 {
+            color: #14532D;
+        }
+
+        .content-card p {
+            line-height: 1.7;
+        }
+
+        /* HIGHLIGHT */
+
+        .highlight {
+            background: #DCFCE7;
+            border-left: 5px solid #FACC15;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 8px;
+            line-height: 1.7;
+        }
+
+        /* PROJECT BOX */
+
+        .project {
+            background: #DCFCE7;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 10px;
+            border-left: 5px solid #14532D;
+        }
+
+        .project h3 {
+            margin-top: 0;
+        }
+
+        /* LIST */
+
+        ul {
+            line-height: 1.8;
+        }
+
+        /* BACK BUTTON */
+
+        .back-button {
+            display: inline-block;
+            background: #14532D;
+            color: white;
+            text-decoration: none;
+            padding: 14px 22px;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        .back-button:hover {
+            background: #FACC15;
+            color: #172018;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #14532D;
+            color: white;
+            text-align: center;
+            padding: 25px;
+            margin-top: 60px;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 700px) {
+
+            nav {
+                flex-wrap: wrap;
+                padding: 18px;
+            }
+
+            nav h2 {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+
+            nav a {
+                font-size: 14px;
+            }
+
+            main {
+                margin: 30px auto;
+                padding: 15px;
+            }
+
+            .content-card {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ==================== NAVIGATION ==================== -->
+
+    <nav>
+
+        <h2>My School</h2>
+
+        <a href="index.html">Home</a>
+        <a href="history.html">History</a>
+        <a href="sections.html">Sections</a>
+        <a href="subjects.html">Subjects</a>
+        <a href="students.html">Students</a>
+
+    </nav>
+
+
+    <!-- ==================== MAIN CONTENT ==================== -->
+
+    <main>
+
+        <h1>🔬 International Science & Engineering</h1>
+
+
+        <!-- INTRODUCTION -->
+
+        <div class="content-card">
+
+            <h2>🌎 Regeneron International Science and Engineering Fair</h2>
+
+            <p>
+                In May 2024, two Grade 12 students from
+                Mandaue City Science National High School
+                represented the Philippines at the
+                <strong>Regeneron International Science and
+                Engineering Fair (ISEF) 2024</strong>.
+            </p>
+
+            <div class="highlight">
+
+                <strong>May 11–17, 2024</strong><br>
+                Los Angeles, California
+
+            </div>
+
+            <p>
+                Regeneron ISEF is a major international science
+                and engineering competition for high school
+                students. The 2024 fair brought together
+                young researchers from around the world.
+            </p>
+
+        </div>
+
+
+        <!-- SCHOOL REPRESENTATIVES -->
+
+        <div class="content-card">
+
+            <h2>🇵🇭 Representing the Philippines</h2>
+
+            <p>
+                The school was represented by two Grade 12
+                students who qualified after competing in the
+                <strong>2024 National Science and Technology
+                Fair (NSTF)</strong>.
+            </p>
+
+            <div class="highlight">
+
+                Both students placed among the
+                <strong>Top 8 nationally</strong> at the
+                National Science and Technology Fair,
+                earning the opportunity to represent the
+                Philippines at ISEF.
+
+            </div>
+
+        </div>
+
+
+        <!-- KARL PROJECT -->
+
+        <div class="content-card">
+
+            <h2>🚁 Karl Gian S. Abellana</h2>
+
+            <div class="project">
+
+                <h3>
+                    Enhanced Crop Disease Symptom Detection
+                    in Corn Using Drone Aerial Imagery and AI
+                </h3>
+
+                <p>
+                    Karl's research focused on detecting
+                    disease symptoms in corn
+                    (<em>Zea mays</em>) using
+                    <strong>drone aerial imagery and
+                    artificial intelligence</strong>.
+                </p>
+
+                <p>
+                    The project explored how aerial images
+                    and AI could be used to identify and map
+                    symptoms of crop diseases.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- CHRISTIAN PROJECT -->
+
+        <div class="content-card">
+
+            <h2>🌾 Christian Paul B. Palacio</h2>
+
+            <div class="project">
+
+                <h3>
+                    Improving Biodiesel Production Using Rice Bran
+                </h3>
+
+                <p>
+                    Christian's research investigated the use
+                    of <strong>rice bran, also known as
+                    "darak"</strong>, as a source for improving
+                    biodiesel production.
+                </p>
+
+                <p>
+                    The project explored how an agricultural
+                    byproduct could be transformed into a
+                    usable energy source.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- RESEARCH PREPARATION -->
+
+        <div class="content-card">
+
+            <h2>🧪 A Year of Research</h2>
+
+            <p>
+                Both students spent approximately
+                <strong>one year developing their research
+                projects</strong> before reaching the
+                international competition.
+            </p>
+
+            <div class="highlight">
+
+                Their participation demonstrates the school's
+                commitment to developing scientific research,
+                innovation, and problem-solving among its
+                students.
+
+            </div>
+
+        </div>
+
+
+        <!-- SCHOOL SUPPORT -->
+
+        <div class="content-card">
+
+            <h2>🏫 School & Community Support</h2>
+
+            <p>
+                The students' achievement was supported by
+                their teachers, coaches, and the school's
+                science program.
+            </p>
+
+            <p>
+                Science coordinator
+                <strong>Erlinda Parba</strong> highlighted
+                the significance of the students' achievement
+                and their participation on the international
+                stage.
+            </p>
+
+            <p>
+                The students and their coaches also paid a
+                courtesy visit to <strong>Mandaue City Hall</strong>
+                following their achievement. Their accomplishment
+                was also featured by GMA Regional TV.
+            </p>
+
+        </div>
+
+
+        <!-- PHILIPPINE DELEGATION -->
+
+        <div class="content-card">
+
+            <h2>🇵🇭 Philippine Delegation</h2>
+
+            <p>
+                The two Mandaue City Science National High School
+                students were part of a wider Philippine delegation
+                at the international fair.
+            </p>
+
+            <p>
+                Other participating Philippine students came from
+                schools including Quezon City Science High School,
+                Angeles City Science High School, City of Bogo
+                Senior High School, and Cebu City National Science
+                High School.
+            </p>
+
+            <div class="highlight">
+
+                The participation of students from different
+                Philippine science schools demonstrated the
+                country's representation in an international
+                science and engineering competition.
+
+            </div>
+
+        </div>
+
+
+        <!-- ACHIEVEMENT -->
+
+        <div class="content-card">
+
+            <h2>🏆 Why This Achievement Matters</h2>
+
+            <p>
+                Representing the Philippines at ISEF was a
+                significant achievement for Mandaue City
+                Science National High School.
+            </p>
+
+            <p>
+                It highlighted the students' dedication to
+                research and demonstrated the school's
+                continued development of young scientists
+                capable of presenting their work on an
+                international stage.
+            </p>
+
+        </div>
+
+
+        <!-- BACK BUTTON -->
+
+        <div class="content-card">
+
+            <a href="history.html" class="back-button">
+                ← Back to Advancements
+            </a>
+
+        </div>
+
+    </main>
+
+
+    <!-- ==================== FOOTER ==================== -->
+
+    <footer>
+
+        <p>
+            © 2026 My School
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
+```

@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cultural & Performing Arts</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: #172018;
+
+            background-image:
+                linear-gradient(
+                    rgba(20, 83, 45, 0.82),
+                    rgba(220, 252, 231, 0.90)
+                ),
+                url("images/school.jpg");
+
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+        }
+
+        /* NAVIGATION */
+
+        nav {
+            background: #14532D;
+            padding: 18px 40px;
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+
+        nav h2 {
+            color: white;
+            margin: 0;
+            margin-right: auto;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #FACC15;
+        }
+
+        /* MAIN */
+
+        main {
+            max-width: 1100px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #14532D;
+            margin-bottom: 40px;
+        }
+
+        /* CONTENT CARDS */
+
+        .content-card {
+            background: rgba(255, 255, 255, 0.94);
+            padding: 30px;
+            margin-bottom: 25px;
+            border-radius: 12px;
+
+            box-shadow:
+                0 4px 10px rgba(0, 0, 0, 0.08);
+        }
+
+        .content-card h2 {
+            color: #14532D;
+            margin-top: 0;
+        }
+
+        .content-card p {
+            line-height: 1.7;
+        }
+
+        /* ACHIEVEMENT BOX */
+
+        .achievement {
+            background: #DCFCE7;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 10px;
+
+            border-left: 5px solid #FACC15;
+        }
+
+        .achievement h3 {
+            color: #14532D;
+            margin-top: 0;
+        }
+
+        /* HIGHLIGHT */
+
+        .highlight {
+            background: #DCFCE7;
+            border-left: 5px solid #FACC15;
+            padding: 20px;
+            margin-top: 25px;
+            border-radius: 8px;
+            line-height: 1.7;
+        }
+
+        /* BACK BUTTON */
+
+        .back-button {
+            display: inline-block;
+            background: #14532D;
+            color: white;
+            text-decoration: none;
+
+            padding: 14px 22px;
+            border-radius: 8px;
+
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .back-button:hover {
+            background: #FACC15;
+            color: #172018;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #14532D;
+            color: white;
+            text-align: center;
+            padding: 25px;
+            margin-top: 60px;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 700px) {
+
+            nav {
+                flex-wrap: wrap;
+                padding: 18px;
+            }
+
+            nav h2 {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+
+            nav a {
+                font-size: 14px;
+            }
+
+            main {
+                margin: 30px auto;
+                padding: 15px;
+            }
+
+            .content-card {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ==================== NAVIGATION ==================== -->
+
+    <nav>
+
+        <h2>My School</h2>
+
+        <a href="index.html">Home</a>
+        <a href="history.html">History</a>
+        <a href="sections.html">Sections</a>
+        <a href="subjects.html">Subjects</a>
+        <a href="students.html">Students</a>
+
+    </nav>
+
+
+    <!-- ==================== MAIN CONTENT ==================== -->
+
+    <main>
+
+        <h1>🎶 Cultural & Performing Arts</h1>
+
+
+        <!-- INTRODUCTION -->
+
+        <div class="content-card">
+
+            <h2>Cultural Performances</h2>
+
+            <p>
+                Mandaue City Science High School has participated
+                in cultural and performing arts events, showcasing
+                Filipino culture through dance and other performances.
+            </p>
+
+            <p>
+                The school's Dance Company has performed in both
+                local competitions and international cultural
+                exchange events.
+            </p>
+
+        </div>
+
+
+        <!-- 2017 KOREA DAY -->
+
+        <div class="content-card">
+
+            <h2>🇵🇭 2017 Cebu City Korea Day</h2>
+
+            <p>
+                In 2017, the Mandaue City Science High School Dance
+                Company opened the evening at the
+                <strong>7th Cebu City Korea Day</strong>, an
+                international cultural exchange event.
+            </p>
+
+            <p>
+                The students performed traditional Filipino dances
+                while wearing traditional Filipino clothing.
+            </p>
+
+            <div class="highlight">
+
+                The Dance Company shared the program with Korean
+                performing groups from Seoul and Busan, allowing
+                the students to represent Filipino culture alongside
+                international performers.
+
+            </div>
+
+        </div>
+
+
+        <!-- 2025 GSK -->
+
+        <div class="content-card">
+
+            <h2>🌟 2025 GSK Ceremony</h2>
+
+            <p>
+                In 2025, the ManSci Dance Company opened the
+                <strong>GSK (Gawad sa Kabataan) ceremony</strong>.
+            </p>
+
+            <p>
+                The event was organized by
+                <strong>RAFI (Ramon Aboitiz Foundation Inc.)</strong>,
+                one of Cebu's major foundations focused on youth
+                development and cultural heritage.
+            </p>
+
+            <p>
+                RAFI's President and CEO, Amaya Aboitiz, spoke during
+                the event about the importance of young people
+                carrying forward Cebuano cultural heritage.
+            </p>
+
+            <div class="achievement">
+
+                <h3>Opening Performance</h3>
+
+                <p>
+                    The ManSci Dance Company was selected to open
+                    the program, highlighting the school's role in
+                    promoting cultural heritage through performing
+                    arts.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- RFOT 2025 -->
+
+        <div class="content-card">
+
+            <h2>🏆 Regional Festival of Talents 2025</h2>
+
+            <p>
+                At <strong>RFOT 2025 (Regional Festival of Talents)</strong>
+                in the Division of Talisay City, Mandaue City
+                Science High School achieved strong results in
+                performing arts.
+            </p>
+
+            <div class="achievement">
+
+                <h3>🥈 Dance Sports</h3>
+
+                <p>
+                    Mandaue City Science High School placed
+                    <strong>1st Runner-Up</strong> in Dance Sports.
+                </p>
+
+            </div>
+
+            <div class="achievement">
+
+                <h3>🏆 Speech Choir</h3>
+
+                <p>
+                    In the same festival, the school also won
+                    <strong>Champion</strong> in Speech Choir.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- 2014 FOLK DANCE -->
+
+        <div class="content-card">
+
+            <h2>💃 2014 Folk Dance Competition</h2>
+
+            <p>
+                The school's achievements in cultural performances
+                extend further back.
+            </p>
+
+            <p>
+                In 2014, Mandaue City Science High School placed
+                <strong>2nd</strong> in a folk dance competition.
+            </p>
+
+            <div class="highlight">
+
+                The school performed
+                <strong>"Lanceros de Tayabas"</strong>,
+                a traditional Filipino folk dance.
+
+            </div>
+
+            <p>
+                This demonstrates that the school's involvement in
+                competitive cultural performances has continued for
+                more than a decade.
+            </p>
+
+        </div>
+
+
+        <!-- CULTURAL CONTRIBUTION -->
+
+        <div class="content-card">
+
+            <h2>🌏 Promoting Filipino Culture</h2>
+
+            <p>
+                Through its Dance Company and performing arts
+                activities, Mandaue City Science High School
+                provides students with opportunities to represent
+                Filipino and Cebuano culture.
+            </p>
+
+            <p>
+                From local competitions to international cultural
+                exchange events, these performances demonstrate the
+                school's continuing involvement in cultural and
+                performing arts.
+            </p>
+
+        </div>
+
+
+        <!-- BACK BUTTON -->
+
+        <div class="content-card">
+
+            <a href="history.html" class="back-button">
+                ← Back to Advancements
+            </a>
+
+        </div>
+
+    </main>
+
+
+    <!-- ==================== FOOTER ==================== -->
+
+    <footer>
+
+        <p>
+            © 2026 My School
+        </p>
+
+    </footer>
+
+</body>
+</html>

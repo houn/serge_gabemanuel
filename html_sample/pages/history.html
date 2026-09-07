@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School History</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: #172018;
+
+            background-image:
+                linear-gradient(
+                    rgba(20, 83, 45, 0.82),
+                    rgba(220, 252, 231, 0.90)
+                ),
+                url("images/school.jpg");
+
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+        }
+
+        /* NAVIGATION */
+
+        nav {
+            background: #14532D;
+            padding: 18px 40px;
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+
+        nav h2 {
+            color: white;
+            margin: 0;
+            margin-right: auto;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #FACC15;
+        }
+
+        /* MAIN CONTENT */
+
+        main {
+            max-width: 1100px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #14532D;
+            margin-bottom: 40px;
+        }
+
+        /* HISTORY CARDS */
+
+        .history-card {
+            background: rgba(255, 255, 255, 0.92);
+            padding: 30px;
+            margin-bottom: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+        }
+
+        .history-card h2 {
+            color: #14532D;
+            margin-top: 0;
+        }
+
+        .history-card p {
+            line-height: 1.6;
+        }
+
+        /* EXPAND BUTTON */
+
+        .history-button {
+            width: 100%;
+            background: #14532D;
+            color: white;
+            border: none;
+            padding: 16px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: left;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .history-button:hover {
+            background: #FACC15;
+            color: #172018;
+        }
+
+        /* EXPANDABLE CONTENT */
+
+        .history-content {
+            display: none;
+            margin-top: 20px;
+            padding: 20px;
+            background: #DCFCE7;
+            border-radius: 8px;
+            line-height: 1.6;
+        }
+
+        .history-content.show {
+            display: block;
+        }
+
+        /* HIGHLIGHTED HISTORY */
+
+        .highlight {
+            background: #DCFCE7;
+            border-left: 5px solid #FACC15;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 8px;
+            line-height: 1.6;
+        }
+
+        /* ADVANCEMENT LIST */
+
+        .advancement-list {
+            list-style: none;
+            padding: 0;
+            margin-top: 20px;
+        }
+
+        .advancement-list li {
+            margin: 12px 0;
+        }
+
+        .advancement-list a {
+            display: block;
+            background: #14532D;
+            color: white;
+            text-decoration: none;
+            padding: 15px 20px;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: 0.2s;
+        }
+
+        .advancement-list a:hover {
+            background: #FACC15;
+            color: #172018;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #14532D;
+            color: white;
+            text-align: center;
+            padding: 25px;
+            margin-top: 60px;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 700px) {
+
+            nav {
+                flex-wrap: wrap;
+                padding: 18px;
+            }
+
+            nav h2 {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+
+            nav a {
+                font-size: 14px;
+            }
+
+            main {
+                margin: 30px auto;
+                padding: 15px;
+            }
+
+            .history-card {
+                padding: 20px;
+            }
+             background-image:
+        linear-gradient(
+            rgba(20, 83, 45, 0.82),
+            rgba(220, 252, 231, 0.92)
+        ),
+        url("img/mansci school.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+        
+
+        
+    </style>
+</head>
+
+<body>
+
+    <!-- ==================== NAVIGATION ==================== -->
+
+    <nav>
+
+        <h2>My School</h2>
+
+        <a href="index.html">Home</a>
+        <a href="history.html">History</a>
+        <a href="sections.html">Sections</a>
+        <a href="subjects.html">Subjects</a>
+        <a href="students.html">Students</a>
+
+    </nav>
+
+
+    <!-- ==================== MAIN CONTENT ==================== -->
+
+    <main>
+
+        <h1>Our School</h1>
+
+
+        <!-- ==================== HISTORY ==================== -->
+
+        <div class="history-card">
+
+            <h2>📖 History</h2>
+
+            <button
+                class="history-button"
+                onclick="toggleHistory('historyContent')">
+
+                View School History
+
+            </button>
+
+
+            <div id="historyContent" class="history-content">
+
+                <p>
+                    Mandaue City Science National High School,
+                    founded in 1996 as Mandaue City National Science
+                    and Technology High School, offers a special
+                    curriculum with intensive programs in Science,
+                    Mathematics, English, and electives like SPFL
+                    French and Research. Originally operating in
+                    Opao, Mandaue City, it moved to Ibabao-Estancia
+                    in 2008.
+                </p>
+
+
+                <div class="highlight">
+
+                    The school was established to provide advanced
+                    education for students excelling in Science and
+                    Mathematics, beginning with an initial intake of
+                    25 students. Students must maintain an 87% overall
+                    weighted average, with minimum grades of 87% in
+                    Math, English, and Science, and 85% in other
+                    subjects to remain enrolled. The school gained
+                    independence in 1999 and has since earned
+                    recognition through student achievements, with
+                    support from city officials including Mayor
+                    Thadeo Ouano and Barangay Chairman Joy Mangubat.
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- ==================== ADVANCEMENTS ==================== -->
+
+        <div class="history-card">
+
+            <h2>🚀 Advancements</h2>
+
+            <p>
+                Explore the different advancements and developments
+                made by our school.
+            </p>
+
+
+            <ul class="advancement-list">
+
+                <li>
+                    <a href="International Competitions.html">
+                        💻 International Competitions
+                    </a>
+                </li>
+
+                <li>
+                    <a href="Mathematical Achievements.html">
+                        🏫 Mathematical Achievements
+                    </a>
+                </li>
+
+                <li>
+                    <a href="Cultural & Performing Arts.html">
+                        🎶 Cultural & Performing Arts
+                    </a>
+                </li>
+
+                <li>
+                    <a href="Campus Journalism.html">
+                        📝 Campus Journalism
+                    </a>
+                </li>
+                <li>
+                    <a href="Student Leadership & Recognition.html">
+                        🎓 Student Leadership & Recognition
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <!-- ==================== LOCATION ==================== -->
+
+        <div class="history-card">
+
+            <h2>📍 Location</h2>
+
+            <button
+                class="history-button"
+                onclick="toggleHistory('locationContent')">
+
+                View School Location
+
+            </button>
+
+
+            <div id="locationContent" class="history-content">
+
+                <p>
+                    Our school is located at:
+                </p>
+
+                <p>
+                    <strong>
+                        <li>
+                    <a href="https://mapy.com/en/turisticka?l=1&source=osm&id=1073582531&x=123.9440310&y=10.3350953&z=19&fbclid=IwY2xjawUKk51wZG9mBWV4dG4DYWVtAjEwAGJyaWQRMTlJNGJpNVgzbUZGem1NMWtzcnRjBmFwcF9pZBAyMjIwMzkxNzg4MjAwODkyAAEeEK1YTEDTAm1PvwHgt5AgI018EANi4Dswm_Aqtw_VB7RCiap8kX7vbU8IAbo_aem_ZQhOrQFrhNvcy23tjNHW_A">
+                         School Location
+                    </a>
+                </li>
+                       
+                    </strong>
+                </p>
+
+                <p>
+                    Ibabao-Estancia, Mandaue City, Cebu, Philippines
+                </p>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- ==================== FOOTER ==================== -->
+
+    <footer>
+
+        <p>© 2026 My School</p>
+
+    </footer>
+
+
+    <!-- ==================== JAVASCRIPT ==================== -->
+
+    <script>
+
+        function toggleHistory(contentId) {
+
+            const content = document.getElementById(contentId);
+
+            content.classList.toggle("show");
+
+
+            if (content.classList.contains("show")) {
+
+                content.scrollIntoView({
+                    behavior: "smooth",
+                    block: "center"
+                });
+
+            }
+
+        }
+
+    </script>
+
+</body>
+</html>
